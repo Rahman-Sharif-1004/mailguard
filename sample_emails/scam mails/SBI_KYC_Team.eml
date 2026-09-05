@@ -1,0 +1,24 @@
+From: SBI KYC Team <kyc-update@sbi-verify-online.com>
+Reply-To: support@sbi-kycalert.in
+Subject: Important: Your SBI Account will be Blocked - Complete KYC Now
+Authentication-Results: mx.google.com; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/plain
+
+Dear Customer,
+
+As per RBI guidelines, your State Bank of India account KYC verification
+is INCOMPLETE. Your account will be permanently BLOCKED within 24 hours
+if you do not update your KYC details immediately.
+
+Click the link below to verify your PAN, Aadhaar and Account details now:
+http://192.168.7.44/sbi/kyc-verify
+
+Failure to complete this process will result in suspension of all
+banking services including ATM, Net Banking and UPI.
+
+This is an auto-generated message. Please act immediately to avoid
+inconvenience.
+
+Regards,
+SBI KYC Team
+Customer Care Department

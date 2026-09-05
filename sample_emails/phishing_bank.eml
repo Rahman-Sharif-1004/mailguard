@@ -1,0 +1,15 @@
+From: IT-Support <support@paypa1-secure.com>
+Reply-To: verify@account-alerts.ru
+Subject: Urgent: Verify your account now
+Authentication-Results: mx.google.com; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/plain
+
+Dear Customer,
+
+URGENT: Your account will be suspended in 24 hours unless you verify
+your identity immediately. Click here to verify: http://192.168.4.21/verify
+
+Act now to avoid permanent suspension of your account.
+
+Regards,
+Security Team

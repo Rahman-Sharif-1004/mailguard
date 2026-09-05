@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MailGuard — Email Safety Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo">M</div>
+    <div>
+      <h1>MailGuard</h1>
+      <span>Automated Email Safety &amp; Phishing Detection</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Submit an Email</h2>
+    <p class="subtitle">Paste a raw email or upload a .eml file to check it for phishing indicators.</p>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('scan') }}" method="post" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="paste-box">
+          <label>PASTE RAW EMAIL SOURCE</label>
+          <textarea name="raw_email" placeholder="From: sender@example.com&#10;Reply-To: ...&#10;Subject: ...&#10;&#10;Email body here..."></textarea>
+        </div>
+
+        <label class="upload-box" for="eml_file">
+          <div class="upload-icon">&#8593;</div>
+          <strong>Upload .eml file</strong>
+          <span>Click to browse, or drag &amp; drop</span>
+          <input type="file" id="eml_file" name="eml_file" accept=".eml">
+        </label>
+      </div>
+
+      <div class="actions">
+        <div class="lock-note">&#128274; Local analysis only — no message content is transmitted to any external server.</div>
+        <button type="submit" class="scan-btn">&#9654; Scan Email</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

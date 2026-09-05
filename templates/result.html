@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MailGuard — Scan Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo">M</div>
+    <div>
+      <h1>MailGuard</h1>
+      <span>Automated Email Safety &amp; Phishing Detection</span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="banner {{ result.css_class }}">
+      <div class="label">
+        <div class="icon-circle">
+          {% if result.css_class == 'safe' %}&#10003;
+          {% elif result.css_class == 'phishing' or result.css_class == 'high' %}&#9888;
+          {% else %}&#33;{% endif %}
+        </div>
+        <div>
+          <h2>{{ result.category.upper() }}</h2>
+          <p>
+            {% if result.css_class == 'safe' %}No significant phishing indicators detected
+            {% elif result.css_class == 'phishing' %}Escalated risk — treat this message with caution
+            {% else %}Review the indicators below before acting on this message{% endif %}
+          </p>
+        </div>
+      </div>
+      <div class="score">
+        <span class="num">{{ result.score }} / 100</span>
+        <span class="cap">RISK SCORE</span>
+      </div>
+    </div>
+
+    {% if result.css_class in ['phishing', 'high'] %}
+      <div class="warning-strip">
+        &#9888; Do not click any links, reply, or open attachments in this message.
+      </div>
+    {% endif %}
+
+    <div class="panel-title">Reasons</div>
+    <div class="reasons-grid">
+      {% for reason in result.reasons %}
+        <div class="reason-card">
+          <div class="dot {% if result.css_class in ['safe','low'] %}ok{% else %}bad{% endif %}">
+            {% if result.css_class in ['safe','low'] %}&#10003;{% else %}&#10007;{% endif %}
+          </div>
+          <div>{{ reason }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="breakdown">
+      <div class="panel-title">Risk Breakdown</div>
+      {% for name, data in result.breakdown.items() %}
+        <div class="bar-row">
+          <div class="label">{{ name }}</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width: {{ (data.points / data.max * 100) if data.max else 0 }}%;"></div>
+          </div>
+          <div class="value">{{ data.points }} / {{ data.max }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <a class="back-link" href="{{ url_for('index') }}">&larr; Scan another email</a>
+  </div>
+
+</body>
+</html>

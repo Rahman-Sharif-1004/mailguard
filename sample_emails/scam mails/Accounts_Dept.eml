@@ -1,0 +1,39 @@
+From: Accounts Dept <accounts@company-billing-secure.com>
+Reply-To: payments@company-invoices-alert.ru
+Subject: URGENT: Overdue Invoice Payment - Action Required Today
+Authentication-Results: mx.google.com; spf=fail; dkim=fail; dmarc=fail
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="MAILGUARD_BOUNDARY"
+
+--MAILGUARD_BOUNDARY
+Content-Type: text/plain; charset="utf-8"
+
+Dear Finance Team,
+
+This is a reminder that Invoice #INV-88213 for Rs. 4,85,000 is now
+OVERDUE. Immediate payment is required to avoid disruption of services
+and possible legal action against your organization.
+
+Please find the updated bank details attached and process the payment
+today. Our previous account has been temporarily suspended, please use
+the NEW account details in the attached document only.
+
+For any queries, do not call our office number - please reply only to
+this email as our phone lines are currently under maintenance.
+
+Failure to pay by end of day will result in a 15% late penalty and
+termination of our service agreement.
+
+Regards,
+Accounts Department
+
+--MAILGUARD_BOUNDARY
+Content-Type: application/octet-stream; name="invoice_updated_bank_details.pdf.exe"
+Content-Disposition: attachment; filename="invoice_updated_bank_details.pdf.exe"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhIGhhcm1sZXNzIHBsYWNlaG9sZGVyIGZpbGUgZm9yIHRlc3RpbmcgcHVycG9zZXMg
+b25seS4gTm8gYWN0dWFsIGV4ZWN1dGFibGUgY29kZSBpcyBjb250YWluZWQgaW4gdGhpcyBzYW1w
+bGUu
+
+--MAILGUARD_BOUNDARY--

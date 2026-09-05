@@ -1,0 +1,24 @@
+From: Google Security <security-noreply@google-account-alerts.com>
+Reply-To: recovery@googlesupport-verify.net
+Subject: Security Alert: Unusual sign-in activity on your Google Account
+Authentication-Results: mx.google.com; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/plain
+
+Dear User,
+
+We detected a new sign-in to your Google Account from an unrecognized
+device in Moscow, Russia. If this was not you, your account may be
+compromised.
+
+To secure your account immediately, verify your identity now:
+http://192.168.3.77/google/account-verify
+
+If you do not verify within 24 hours, your Google Account, Gmail, and
+all linked services will be permanently SUSPENDED for security reasons.
+
+Enter your email, password, and recovery phone number on the
+verification page to restore full access immediately.
+
+Thank you for helping us keep your account safe.
+
+Google Security Team

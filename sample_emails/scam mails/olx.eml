@@ -1,0 +1,24 @@
+From: OLX Support <support@olx-payment-secure.com>
+Reply-To: payments@olx-transaction-alert.in
+Subject: Payment Received - Confirm Shipping to Release Your Money
+Authentication-Results: mx.google.com; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/plain
+
+Dear Seller,
+
+Good news! A buyer has made a payment of Rs. 18,500 for your listed
+item through OLX Secure Payment. The amount is being held safely and
+will be released to your account once you confirm shipment.
+
+To release the payment to your bank account, click below and verify
+your account details immediately:
+http://192.168.6.29/olx/confirm-payment
+
+Note: If you do not confirm within 6 hours, the transaction will be
+automatically REVERSED to the buyer and your OLX account may be
+restricted for suspicious activity.
+
+Please act now to avoid delay in receiving your payment.
+
+Regards,
+OLX Payments Team
